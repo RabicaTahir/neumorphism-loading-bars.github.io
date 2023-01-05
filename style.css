@@ -1,0 +1,114 @@
+body{
+    background: #e0e5ec;
+    color: rgb(0, 0, 0);
+}
+.container{
+    margin: 100px auto;
+    margin-top: 120px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+.progress{
+    border-radius: 30px;
+    background-color: #e0e5ec;
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+    margin-top: 100px;
+}
+.progress-bars{
+height: 28px;
+border-radius: 30px;
+transition: 0.5s linear;
+transition-property: width, background-color;
+}
+.progress-bars-2{
+    height: 28px;
+    border-radius: 30px;
+    transition: 0.5s linear;
+    transition-property: width, background-color;
+    }
+    .progress-bars-3{
+        height: 28px;
+        border-radius: 30px;
+        transition: 0.5s linear;
+        transition-property: width, background-color;
+        }
+.moving-progress .progress-bars{
+    background-color: #000000;
+    animation: pro 5s infinite;
+}
+.moving-progress-2 .progress-bars-2{
+    background-color: #000000;
+    animation: progres 5s infinite;
+}
+.moving-progress-3 .progress-bars-3{
+    background-color: #000000;
+    animation: progress 5s infinite;
+}
+@keyframes pro {
+    0%{width: 0%; background: linear-gradient(to left, #FFA69E, #861657);}
+    100%{width: 100%; background: linear-gradient(to left, #FFA69E, #861657);}  
+}
+@keyframes progres {
+    0%{width: 0%;  background: linear-gradient(to right,#5F0A87 ,#A4508B );}
+    100%{width: 75%;  background: linear-gradient(to right,#5F0A87 ,#A4508B );}  
+}
+@keyframes progress {
+    0%{width: 0%;  
+        background: linear-gradient(to right,#6B0F1A ,#B91372 );}
+    100%{width: 50%;  
+        background: linear-gradient(to right,#6B0F1A ,#B91372 );}  
+}
+.loader{
+    --load: 0;
+    animation: p 5s steps(100) infinite;
+    counter-reset: p var(--load);
+    font-size: 20px;
+    position: absolute;
+    bottom: 45px;
+    left: 325px;
+    color: #000000;
+}
+.loader:after{
+    content: counter(p) "%";
+}
+@keyframes p {
+    90%,
+    100% {--load:100;}
+}
+.loader-2{
+    --load-1: 0;
+    animation: pp 5s steps(75) infinite;
+    counter-reset: pp var(--load-1);
+    font-size: 20px;
+    position: absolute;
+    bottom: 45px;
+    left: 325px;
+    color: #000000;
+}
+.loader-2:after{
+    content: counter(pp) "%";
+}
+@keyframes pp {
+    90%,
+    100%{--load-1:75;}
+}
+
+.loader-3{
+    --load-3: 0;
+    animation: ppp 5s steps(50) infinite;
+    counter-reset: ppp var(--load-3);
+    font-size: 20px;
+    position: absolute;
+    bottom: 45px;
+    left: 325px;
+    color: #000000;
+}
+.loader-3:after{
+    content: counter(ppp) "%";
+}
+@keyframes ppp {
+    90%,
+    100%{--load-3:50;}
+}
